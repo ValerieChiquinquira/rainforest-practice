@@ -11,6 +11,7 @@
 
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> | <% if @review.product.nil? %>
+<%= link_to 'Edit', edit_review_path(@review) %> | 
+<% if URI(request.referer).path == '/reviews/new' || '/reviews' %>
 <%= link_to 'Back', reviews_path %> <% else %> <%= link_to 'Back',
 @review.product %> <% end %>
