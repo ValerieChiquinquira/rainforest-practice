@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+body{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: palegoldenrod;
+}
+h1{
+     padding-bottom: 2%;
+     margin: 0;
+}
+p{
+
+}
+.nav-buttons{
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+    display: inline;
+    font-size: medium;
+    font-family: Courier;
+}

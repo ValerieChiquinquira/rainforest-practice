@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <h1><%= @product.name %></h1>
 </p>
 
 <p>
@@ -25,6 +24,6 @@
 <% end %>
 
 <h3>New Review</h3>
-<%= render 'reviews/form' %> <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', root_path %>
+<%= render 'reviews/form' %> <div class="nav-buttons"><%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', root_path %></div>
 
