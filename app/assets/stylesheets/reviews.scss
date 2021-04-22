@@ -1,28 +1,42 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// body{
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+// .field{
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     -ms-flex-align: center;
+// }
+// form{
+//     width: 50%;
+//     label{
+//         padding-bottom: 1%;
+//         font-size: medium;
+//     }
+//     #review_comment{
+//         padding-bottom: 1%;
+//     }
+//     input{
+//         font-size: medium;
+//     }
+// }
+.review-form {
+  margin: 20px 0;
 }
-.field{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    -ms-flex-align: center;
-}
-form{
-    width: 50%;
-    label{
-        padding-bottom: 1%;
-        font-size: medium;
-    }
-    #review_comment{
-        padding-bottom: 1%;
-    }
-    input{
-        font-size: medium;
-    }
+
+.reviews {
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  li span {
+    display: block;
+    font-size: 14px;
+  }
 }
