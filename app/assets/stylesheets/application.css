@@ -143,3 +143,9 @@ main {
 .product-image-wrap img {
   border-radius: 9px;
 }
+#error_explanation {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  padding: 1rem;
+}
