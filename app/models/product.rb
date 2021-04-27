@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
 
     belongs_to :user
     
-    has_many :reviews
+    has_many :reviews,  dependent: :destroy
 
     validates :description, :name, presence: true
     validates :price_in_cents, numericality: {only_integer: true, greater_than: 0}

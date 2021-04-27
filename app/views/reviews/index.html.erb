@@ -17,7 +17,7 @@
       <tr>
         <td><%= review.comment %></td>
         <td><%= review.product.id %></td>
-        <td><%= current_user.username %></td>
+        <td><%= (User.find_by id: review.user_id).username %></td>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>
         <td><%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
