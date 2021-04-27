@@ -1,9 +1,13 @@
 class Product < ActiveRecord::Base
     has_one_attached :image
-    validates :description, :name, presence: true
-    validates :price_in_cents, numericality: {only_integer: true, greater_than: 0}
+
+    belongs_to :user
+    
     has_many :reviews
 
+    validates :description, :name, presence: true
+    validates :price_in_cents, numericality: {only_integer: true, greater_than: 0}
+    
     def formatted_price
       price_in_dollars = price_in_cents.to_f / 100
       sprintf("%.2f", price_in_dollars)
@@ -16,4 +20,6 @@ class Product < ActiveRecord::Base
         "product-default.jpg"
       end
     end
+
+    
   end

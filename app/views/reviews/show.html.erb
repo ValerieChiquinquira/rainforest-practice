@@ -3,12 +3,18 @@
 <p>
   <h1>Comment &num; <%= @review.id %> </h1>
   <%= @review.comment %>
+  
 </p>
 <br>
 <p>
   <strong>Product:</strong>
   <%= @review.product.name %>
+ 
 </p>
+
+  
+ 
+
 
 <div class="nav-buttons"><%= link_to 'Edit', edit_review_path(@review) %> | 
 <% if URI(request.referer).path == '/reviews/new' || '/reviews' %>

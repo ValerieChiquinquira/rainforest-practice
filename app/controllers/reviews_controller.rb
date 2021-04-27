@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show] 
   before_action :set_review, only: %i[ show edit update destroy ]
+   
 
   # GET /reviews or /reviews.json
   def index
@@ -64,6 +66,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:comment, :product_id)
+      params.require(:review).permit(:comment, :product_id, :user_id)
     end
 end

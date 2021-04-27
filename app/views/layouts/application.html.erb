@@ -14,6 +14,16 @@
     <header id='header'>
       <div class='container'>
         <div class='logo'> <%= link_to "Rain Forest", root_path %> </div>
+        <div>
+
+          <% if user_signed_in? %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'new-product-btn' %>   
+          <% else %>
+            <%= link_to 'Sign up', new_user_registration_path, class: 'new-product-btn' %>   
+            <%= link_to 'Sign In', new_user_session_path, class: 'new-product-btn' %>   
+        <% end %>
+</div>
+
       </div>
     </header>
     <main>

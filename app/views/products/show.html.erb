@@ -25,7 +25,10 @@
     <strong>Price:</strong> 
     $<%= @product.formatted_price %>
   </p>
+
+  <span> Product owner: <%= @product.user_id %> </span>
 </div>
+
 
 </section>
 
@@ -38,11 +41,19 @@
     <% @product.reviews.each do |review| %>
       <li>
         <h3><%= review.comment %></h3>
-        <span class="created-at">Posted on: <%= review.created_at.strftime("%b-%d-%Y") %></span>
-      </li>
+      
+        
+        <span class="created-at">Posted on: <%= review.created_at.strftime("%b-%d-%Y") %> </span>
+        
+        <span> Review crafted by: <%= @review.user_id %> </span>
+        </li>
+ 
     <% end %>
   </ul>
+
+
 <% end %>
+
 
 
 <div class='review-form'>
