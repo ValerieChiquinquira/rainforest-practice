@@ -13,16 +13,20 @@
   <body>
     <header id='header'>
       <div class='container'>
+      <div class='header-wrap'>
         <div class='logo'> <%= link_to "Rain Forest", root_path %> </div>
-        <div>
-
+        
+        <div class='auth-nav'>
           <% if user_signed_in? %>
-            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'new-product-btn' %>   
+          Logged in as <strong><%= current_user.username %></strong>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-btn btn btn-primary' %>   
           <% else %>
-            <%= link_to 'Sign up', new_user_registration_path, class: 'new-product-btn' %>   
-            <%= link_to 'Sign In', new_user_session_path, class: 'new-product-btn' %>   
-        <% end %>
-</div>
+            <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-btn btn btn-primary-outline' %> 
+            <%= link_to 'Sign up', new_user_registration_path, class: 'sign-up-btn btn btn-primary ' %>     
+          <% end %>
+        </div>
+
+      </div>  
 
       </div>
     </header>

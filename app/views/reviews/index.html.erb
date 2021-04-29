@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice%>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>Reviews</h1>
 
@@ -8,7 +10,7 @@
       <th>Comment</th>
       <th>Product</th>
       <th>Reviewer</th>
-      <th colspan="4"></th>
+      <th> actions</th>
     </tr>
   </thead>
 
@@ -17,10 +19,12 @@
       <tr>
         <td><%= review.comment %></td>
         <td><%= review.product.id %></td>
-        <td><%= current_user.username %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= review.user_id %></td>
+        <td class="action-product">
+          <span class='show'><%= link_to 'Show', review %></span>
+          <span class='edit'><%= link_to 'Edit', edit_review_path(review) %></span>
+          <span class='delete'><%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+       </td>
       </tr>
     <% end %>
   </tbody>

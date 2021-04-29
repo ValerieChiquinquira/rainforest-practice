@@ -67,13 +67,20 @@ img {
 .container {
   margin: 0 auto;
   width: 90%;
-  max-width: 1170px;
+  max-width: 1400px;
+  position: relative;
 }
 
 #header {
   background-color: #395697;
   padding: 20px 0;
   color: #fff;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -142,4 +149,43 @@ main {
 }
 .product-image-wrap img {
   border-radius: 9px;
+}
+
+.auth {
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.auth-nav a {
+  margin-left: 10px;
+}
+
+#new_user {
+  width: 100%;
+}
+
+.btn {
+  padding: 12px 15px;
+  background: transparent;
+  color: #333;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn-primary-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: purple;
+  border: 1px solid inherit;
+  color: #fff;
 }

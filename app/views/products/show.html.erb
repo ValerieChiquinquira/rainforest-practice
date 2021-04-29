@@ -26,9 +26,14 @@
     $<%= @product.formatted_price %>
   </p>
 
-  <span> Product owner: <%= @product.user_id %> </span>
-</div>
+  <p>
+    <strong>Quantity:</strong> 
+    <%= @product.quantity %>
+  </p>
 
+  <span> Product owner: <%= @product_owner %> </span>
+</div>
+<%= @review_by%>
 
 </section>
 
@@ -45,7 +50,7 @@
         
         <span class="created-at">Posted on: <%= review.created_at.strftime("%b-%d-%Y") %> </span>
         
-        <span> Review crafted by: <%= @review.user_id %> </span>
+        <span> Review crafted by: <%= User.find(review.user_id).username %> </span> 
         </li>
  
     <% end %>

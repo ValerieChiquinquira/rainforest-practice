@@ -17,6 +17,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
+      <th>Quantity</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -27,6 +28,7 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td>$<%= product.formatted_price %></td>
+        <td><%= product.quantity %></td>
         <td class='action-product'>
           <span class='show'><%= link_to 'Show', product %></span>
           <span class="edit"><%= link_to 'Edit', edit_product_path(product) %></span>
