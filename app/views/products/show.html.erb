@@ -1,31 +1,68 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.formatted_price %>
-</p>
-
-<h3>Reviews</h3>
-
-<% @product.reviews.each do |review| %>
-<p>
-  <%= review.comment %>
-  <br />
-  Added on: <%= review.created_at %>
-</p>
+<% if notice %>
+ <p id="notice"><%= notice %></p>
 <% end %>
 
-<h3>New Review</h3>
-<%= render 'reviews/form' %> <%= link_to 'Edit', edit_product_path(@product) %>
-<%= link_to 'Back', products_path %>
+
+<section class='product'>
+
+<div class='product-image-wrap'>
+  <%= image_tag @product.product_image %>
+</div>
+
+
+<div class='product-info'>
+  <h1><%= @product.name %></h1>
+  <div class="nav-buttons">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back to Products', root_path %>
+  </div>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Price:</strong> 
+    $<%= @product.formatted_price %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong> 
+    <%= @product.quantity %>
+  </p>
+
+  <span> Product owner: <%= @product_owner %> </span>
+</div>
+<%= @review_by%>
+
+</section>
+
+<h2>Reviews</h2>
+
+<% if @product.reviews.length < 1 %>
+  <p>No Reviews available</p>
+<% else %>
+  <ul class='reviews'>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <h3><%= review.comment %></h3>
+      
+        
+        <span class="created-at">Posted on: <%= review.created_at.strftime("%b-%d-%Y") %> </span>
+        
+        <span> Review crafted by: <%= User.find(review.user_id).username %> </span> 
+        </li>
+ 
+    <% end %>
+  </ul>
+
+
+<% end %>
+
+
+
+<div class='review-form'>
+<%= render 'reviews/form' %>  
+</div> 
+
 

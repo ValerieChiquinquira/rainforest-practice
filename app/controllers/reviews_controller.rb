@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show] 
   before_action :set_review, only: %i[ show edit update destroy ]
+   
 
   # GET /reviews or /reviews.json
   def index
@@ -22,10 +24,11 @@ class ReviewsController < ApplicationController
   # POST /reviews or /reviews.json
   def create
     @review = Review.new(review_params)
+    
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: "Review was successfully created." }
+        format.html { redirect_to product_path(@review.product), notice: "Review was successfully created." }
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,7 +54,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: "Review was successfully destroyed." }
+      format.html { redirect_to reviews_url, notice: "Review was successfully deleted." }
       format.json { head :no_content }
     end
   end
@@ -64,6 +67,7 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:comment, :product_id)
+      params.require(:review).permit( :comment, :product_id ).merge(:user_id => current_user.id)
     end
 end
+

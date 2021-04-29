@@ -13,3 +13,179 @@
  *= require_tree .
  *= require_self
  */
+/* body{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: palegoldenrod;
+}
+h1{
+     padding-bottom: 2%;
+     margin: 0;
+}
+p{
+
+}
+.nav-buttons{
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+    display: inline;
+    font-size: medium;
+    font-family: Courier;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1400px;
+  position: relative;
+}
+
+#header {
+  background-color: #395697;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+main {
+  flex: 1;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  padding: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 16px 10px;
+  border-radius: 5px;
+}
+.submit-btn {
+  border: transparent;
+  background: #333;
+  color: #eee;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+#footer {
+  background-color: #212121;
+  padding: 20px 0;
+  color: #fff;
+}
+#notice {
+  background: rgb(5, 96, 5);
+  color: #fff;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.product {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+.product-image-wrap {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin-right: 40px;
+}
+.product-image img {
+  width: 100%;
+}
+.product-image-wrap img {
+  border-radius: 9px;
+}
+
+.auth {
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.auth-nav a {
+  margin-left: 10px;
+}
+
+#new_user {
+  width: 100%;
+}
+
+.btn {
+  padding: 12px 15px;
+  background: transparent;
+  color: #333;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn-primary-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: purple;
+  border: 1px solid inherit;
+  color: #fff;
+}

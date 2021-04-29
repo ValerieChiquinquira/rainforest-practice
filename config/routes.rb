@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :reviews
   resources :products
   root "products#index"
@@ -6,4 +7,4 @@ Rails.application.routes.draw do
 end
 
 # add the root to this.
-# at first I had product#index but that yielded an error
+# at first it had product#index but that yielded an error
