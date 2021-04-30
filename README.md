@@ -3,7 +3,7 @@ Rainforest is a marketplace site, similar to Amazon, that allows users to list/r
 
 ![home-page](./screenshots/1.png)
 
-It includes user authentication.
+It includes user authentication through the use of the 'Devise' gem.
 
 ![login-page](./screenshots/2.png)
 
