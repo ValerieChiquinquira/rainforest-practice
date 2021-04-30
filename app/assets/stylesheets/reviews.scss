@@ -40,3 +40,52 @@
     font-size: 14px;
   }
 }
+table {
+  width: 100%;
+  thead > tr {
+    background: #333;
+    color: #eee;
+    padding: 0 5px;
+    margin-bottom: 5px;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+  th,
+  td {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    align-items: center;
+    padding: 5px 0;
+  }
+  .action-review span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-right: 10px;
+    width: 74px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .edit {
+    color: green;
+  }
+
+  .delete {
+    color: red;
+  }
+
+  .show {
+    color: rgb(255, 111, 0);
+  }
+}
